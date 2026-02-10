@@ -102,7 +102,7 @@ class TestReverseGoGo(unittest.TestCase):
         
         # Virtual distance should not be negative
         self.assertGreaterEqual(virtual_distance, 0)
-        # Should be at least at hand position
+        # Should be at least at hand position (objects don't appear behind the hand)
         self.assertGreaterEqual(virtual_distance, hand_extension)
     
     def test_calculate_object_position_1d(self):
